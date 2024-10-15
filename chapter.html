@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> المقطع الكتابي</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Google Fonts - Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+    <!-- Animate.css for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <h2 class="mb-4"> المقطع الكتابي انهاردة هو</h2>
+        <!-- إرشادات المستخدم -->
+        <div id="chapterToast" class="toast" data-delay="5000">
+            <div class="toast-header">
+                <strong class="mr-auto">ملاحظة!</strong>
+                <small>الآن</small>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+            </div>
+            <div class="toast-body">
+                اقرأ الإصحاح المخصص لليوم وبعد اضغط على الزر انك تمام قرايت الاصحاح علشان تجاوب على الأسئلة.
+            </div>
+        </div>
+        <h4 id="chapter-title" class="mt-3 animate__animated animate__fadeInDown"></h4>
+        <div id="chapter-content" class="mb-4 animate__animated animate__fadeInUp"></div>
+        <button id="readBtn" class="btn btn-success btn-block mb-2 animate__animated animate__zoomIn">   قريت الاصحاح , يلا بينا</button>
+        <button onclick="window.location.href='index.html'" class="btn btn-danger btn-block">الرجوع للصفحة الرئيسية</button>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-messaging.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

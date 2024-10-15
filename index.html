@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="/manifest.json">
+
+    <title>وقتي مع ربنا </title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Google Fonts - Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+    <!-- Animate.css for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container text-center mt-5">
+      <img src="logo.png" alt="logo">
+        <h1 class="mb-4">  وقتي مع ربنا</h1>
+        <!-- إرشادات المستخدم -->
+        <div id="welcomeToast" class="toast" data-delay="5000">
+            <div class="toast-header">
+                <strong class="mr-auto">ازيك!</strong>
+                <small>الآن</small>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+            </div>
+         
+            <div class="toast-body">
+                من فضلك، اكتب اسمك واختر سنتك الدراسية علشان تبدأوقتك مع ربنا.
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="text" id="username" class="form-control" placeholder="اسمك" required>
+        </div>
+        <div class="form-group">
+            <select id="grade" class="form-control" required>
+                <option value="">اختر سنتك الدراسية</option>
+                <option value="الأولى ثانوي">أولي ثانوي</option>
+                <option value="الثانية ثانوي">ُثانية ثانوي</option>
+                <option value="الثالثة ثانوي">ثالثة ثانوي</option>
+                <option value=" اخري">  اخري</option>
+            </select>
+        </div>
+        <button id="nextBtn" class="btn btn-primary btn-block mb-2">يلا بينا</button>
+        <button id="adminBtn" class="btn btn-secondary btn-block" data-toggle="modal" data-target="#adminModal">دخول المسؤول</button>
+
+    </div>
+
+   
+    
+
+    <!-- نموذج تسجيل دخول المسؤول -->
+    <div class="modal fade" id="adminModal" tabindex="-1" aria-labelledby="adminModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="adminModalLabel">تسجيل دخول المسؤول</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="إغلاق">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+
+          <div class="modal-body">
+            <form id="adminLoginForm">
+              <div class="form-group">
+                <label for="adminPassword">كلمة المرور:</label>
+                <input type="password" class="form-control" id="adminPassword" placeholder="أدخل كلمة المرور" required>
+              </div>
+              <button type="submit" class="btn btn-danger btn-block">دخول</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+    <!-- Bootstrap JS    //
+and dependencies -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-messaging.js"></script>
+    <script type="module" src="js/app.js" defer></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script type="module" src="js/app.js"></script>
+
+
+
+    <div><span><div>   
+      <button id="installBtn" class="btn btn-primary" > <i class="fas fa-download"></i>تثبيت التطبيق</button>
+ </div>       
+  </span></div>
+   
+</body>
+</html>

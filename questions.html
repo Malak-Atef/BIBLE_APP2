@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأسئلة</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Google Fonts - Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+    <!-- Animate.css for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <h2 class="mb-4">الإجابة على الأسئلة</h2>
+        <!-- إرشادات المستخدم -->
+        <div id="questionsToast" class="toast" data-delay="5000">
+            <div class="toast-header">
+                <strong class="mr-auto">تذكير!</strong>
+                <small>الآن</small>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+            </div>
+            <div class="toast-body">
+                جاوب على التلاتة أسئلة اللي تحت بناءً على قراءتك للإصحاح انهاردة.
+            </div>
+        </div>
+        <form id="questionsForm" class="animate__animated animate__fadeIn">
+            <!-- الأسئلة سيتم إضافتها هنا ديناميكيًا -->
+        </form>
+        <button id="submitBtn" class="btn btn-primary btn-block mb-2">أرسل إجاباتك</button>
+        <button onclick="window.location.href='index.html'" class="btn btn-danger btn-block">الرجوع للصفحة الرئيسية</button>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-messaging.js"></script>
+    
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+body {
+    background-color: #f8f9fa;
+    direction: rtl;
+    font-family: 'Cairo', sans-serif;
+}
+
+h1, h2, h4 {
+    color: #343a40;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    transition: background-color 0.3s, transform 0.3s;
+
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* تكبير الزر قليلاً عند التحويم */
+}
+
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    transform: scale(1.05);
+}
+
+.btn-success {
+    background-color: #28a745;
+    border: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+.table {
+    margin-top: 20px;
+}
+
+.container {
+    max-width: 800px;
+}
+
+/* تنسيق إضافي لزر تحميل التطبيق */
+#installBtn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 100px;
+    border-radius: 50px;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    animation: pulsate 1.5s infinite; /* إضافة تأثير النبض */
+}
+#installBtn i {
+    margin-right: 8px; /* إضافة مسافة صغيرة بين الأيقونة والنص */
+}
+#installBtn:hover {
+    background-color: #0056b3;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* إضافة ظل جميل عند التحويم */
+    transform: scale(1.1) translate(-50%, -50%); /* تكبير الزر قليلاً عند التحويم */
+}
+
+/* تخصيص Toast */
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    min-width: 250px;
+    z-index: 1055;
+    opacity: 0; /* ابدأ بـ opacity 0 */
+    transition: opacity 0.5s ease-in; /* تأثير الانتقال */
+}
+
+.toast.show {
+    opacity: 1; /* عندما تُظهر الـ Toast */
+}
+
+.toast-body.bg-info {
+    background-color: #17a2b8; /* لون مخصص للرسائل الإرشادية */
+}
+
+.toast-body.bg-success {
+    background-color: #28a745; /* لون النجاح */
+}
+
+.toast-body.bg-danger {
+    background-color: #dc3545; /* لون الخطأ */
+}
+
+/* تحسين مظهر الرسائل الإرشادية */
+.toast-body {
+    font-size: 1rem;
+}
+
+/* تحسين مظهر الأزرار في التقارير */
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+}
+
+/* إضافة تأثيرات إضافية */
+.animate__animated.animate__fadeIn, 
+.animate__animated.animate__fadeInDown, 
+.animate__animated.animate__fadeInUp, 
+.animate__animated.animate__zoomIn {
+    animation-duration: 1s;
+}
+
+/* إضافة تأثير نبض لزر التحميل */
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* تحسين تجربة الاستخدام على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+        max-width: 100%; /* اجعل العرض 100% على الشاشات الصغيرة */
+    }
+
+    h1, h2, h4 {
+        font-size: 1.5rem; /* تقليل حجم الخط */
+    }
+
+    #installBtn {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
